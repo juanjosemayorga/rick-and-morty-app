@@ -1,9 +1,10 @@
 import React from 'react'
+import { MainSection } from '../../components/MainSection/MainSection'
 
 export const Home = () => {
   return (
     <div>
-      <h1>This is the home screen</h1>
+      <MainSection />
     </div>
   )
 }
