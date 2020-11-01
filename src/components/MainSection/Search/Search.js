@@ -1,14 +1,21 @@
 import React from 'react'
+import {
+  Form,
+  ContainerSearch,
+  Input,
+  Button
+} from './styles'
+
 import SearchLogo from '../../../assets/Search/SearchLogo'
 
 export const Search = () => {
   return (
-    <form>
-      <div>
+    <Form>
+      <ContainerSearch>
         <SearchLogo />
-        <input type="text" placeholder="Search character" />
-      </div>
-      <button>SEARCH</button>
-    </form>
+        <Input type="text" placeholder="Search character" />
+      </ContainerSearch>
+      <Button>SEARCH</Button>
+    </Form>
   )
 }
