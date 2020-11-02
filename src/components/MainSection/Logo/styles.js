@@ -1,16 +1,36 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
-export const SVG = styled.svg`
-  width: 423px;
-  transition: 0.3s;
-  &:hover {
-    width: 487px;
+const scale = keyframes`
+  0%, 100% {
+    transform: scale(1);
   }
-  &:hover g {
+  50% {
+    transform: scale(1.3);
+  }
+`;
+
+const color = keyframes`
+    0%, 100% {
+    fill: #effad3;
+  }
+  50% {
     fill: #A8DDA8;
   }
 `;
 
+export const SVG = styled.svg`
+  width: 423px;
+  animation:
+    ${scale} 3s ease-in-out infinite;
+  /* transition: 0.3s; */
+  /* &:hover {
+    width: 487px;
+  } */
+  /* &:hover g {
+    fill: #A8DDA8;
+  } */
+`;
+
 export const G = styled.g`
-  transition: 0.3s;
+  animation: ${color} 3s linear infinite;
 `;
