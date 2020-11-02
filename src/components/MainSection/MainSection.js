@@ -7,11 +7,11 @@ import { Filters } from './Filters/Filters'
 import Logo from './Logo/Logo'
 import { Search } from './Search/Search'
 
-export const MainSection = () => {
+export const MainSection = ({ word }) => {
   return (
     <Container>
       <Logo />
-      <Search />
+      <Search word={word}/>
       <Filters />
     </Container>
   )

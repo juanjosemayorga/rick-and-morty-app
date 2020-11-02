@@ -10,8 +10,9 @@ import { useQuery } from '@apollo/react-hooks'
 import { gql } from 'apollo-boost'
 
 const characters = gql`
+query personajes($name: String!)
 {
-	characters(page: 1) {
+	characters(page: 1, filter: { name: $name }) {
     results {
       id
       name
@@ -30,9 +31,13 @@ const characters = gql`
 }
 `;
 
-export const ListCards = () => {
+export const ListCards = ({ name }) => {
 
-  const { loading, error, data } = useQuery(characters)
+  // const name = "rick"
+
+  const { loading, error, data } = useQuery(characters, {
+    variables: { name }
+  })
 
   if (loading) return <LoadingCards />
   if (error) return 'No hay datos'

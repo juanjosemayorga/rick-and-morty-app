@@ -22,7 +22,7 @@ export const ContainerSearch = styled.div`
 `;
 
 export const Input = styled.input`
-  width: 700px;
+  width: 740px;
   background-color: transparent;
   font-size: 1.2rem;
   color: white;
