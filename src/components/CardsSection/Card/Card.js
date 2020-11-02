@@ -5,6 +5,8 @@ import {
   Img,
   Name,
   StatusAndSpecies,
+  Status,
+  Space,
   Gender,
   Hr,
   MoreDataContainer,
@@ -16,6 +18,18 @@ export const Card = ({ data: { name, status, species, gender, image, origin, loc
 
   const [expanded, setExpanded] = useState(false)
 
+  const getStatusColor = status => {
+    if (status === 'Alive') {
+      return 'green'
+    }
+    if (status === 'Dead') {
+      return 'red'
+    }
+    if (status === 'unknown') {
+      return '#232F34'
+    }
+  }
+
   const handleExpanded = () => {
     setExpanded(!expanded)
   }
@@ -26,7 +40,11 @@ export const Card = ({ data: { name, status, species, gender, image, origin, loc
         <Img src={image} />
       </Figure>
       <Name>{name}</Name>
-      <StatusAndSpecies>{`${status} - ${species}`}</StatusAndSpecies>
+      <StatusAndSpecies>
+        <Status color={getStatusColor(status)}>{status}</Status>
+        <Space>-</Space>
+        <p>{species}</p>
+      </StatusAndSpecies>
       <Gender>{gender}</Gender>
         <Hr />
       <MoreDataContainer>

@@ -45,7 +45,7 @@ export const Name = styled.p`
   text-indent: 16px;
 `;
 
-export const StatusAndSpecies = styled.p`
+export const StatusAndSpecies = styled.div`
   display: flex;
   align-items: flex-end;
   width: 344px;
@@ -55,7 +55,17 @@ export const StatusAndSpecies = styled.p`
   font-weight: normal;
   color: #232f34;
   text-align: start;
+`;
+
+export const Status = styled.p`
+  color: ${props => props.color};
   text-indent: 16px;
+  font-weight: 500;
+`;
+
+export const Space = styled.p`
+  margin-left: 6px;
+  margin-right: 6px;
 `;
 
 export const Gender = styled.p`
