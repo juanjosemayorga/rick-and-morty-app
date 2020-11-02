@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Work Sans', sans-serif;
+    background-color: #2d6187;
   }
 `;
 
