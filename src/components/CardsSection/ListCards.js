@@ -28,6 +28,9 @@ query personajes($page: Int!, $name: String!, $gender: String!, $status: String!
         name
       }
     }
+    info {
+      pages
+    }
   }
 }
 `;

@@ -10,7 +10,7 @@ export const CardContainer = styled.div`
   margin-right: 20px;
   margin-top: 16px;
   overflow: hidden;
-  transition: 0.1s;
+  transition: 0.1s ease-out;
   &:hover {
     box-sizing: content-box;
     border: solid 2px #EFFAD3;

@@ -7,9 +7,7 @@ import {
   Number
 } from './styles.js'
 
-export const PaginationComponent = ({ currentPage, setCurrentPage }) => {
-
-
+export const PaginationComponent = ({ currentPage, setCurrentPage, numberOfPages }) => {
 
   const handleNextPage = () => {
     if (currentPage === 36) {
