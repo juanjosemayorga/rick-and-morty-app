@@ -11,6 +11,7 @@ export const CardContainer = styled.div`
   margin-top: 16px;
   overflow: hidden;
   transition: 0.1s ease-out;
+  cursor: pointer;
   &:hover {
     box-sizing: content-box;
     border: solid 2px #EFFAD3;
