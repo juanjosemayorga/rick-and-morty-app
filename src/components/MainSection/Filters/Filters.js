@@ -5,11 +5,17 @@ import {
   Container
 } from './styles.js'
 
-export const Filters = ({ genderChosen, statusChosen }) => {
+export const Filters = ({ genderChosen, statusChosen, setCurrentPage }) => {
   return (
     <Container>
-      <Gender genderChosen={genderChosen}/>
-      <Status statusChosen={statusChosen}/>
+      <Gender
+        genderChosen={genderChosen}
+        setCurrentPage={setCurrentPage}
+        />
+      <Status
+        statusChosen={statusChosen}
+        setCurrentPage={setCurrentPage}
+        />
     </Container>
   )
 }

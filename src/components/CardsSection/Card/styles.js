@@ -10,7 +10,7 @@ export const CardContainer = styled.div`
   margin-right: 20px;
   margin-top: 16px;
   overflow: hidden;
-  /* transition: 0.1s; */
+  transition: 0.1s;
   &:hover {
     box-sizing: content-box;
     border: solid 2px #EFFAD3;
@@ -20,6 +20,7 @@ export const CardContainer = styled.div`
 export const Figure = styled.figure`
   width: 344px;
   height: 194px;
+  margin: 0;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
 `;
@@ -37,6 +38,7 @@ export const Name = styled.p`
   align-items: flex-end;
   width: 344px;
   height: 44px;
+  margin-bottom: 8px;
   font-family: 'Work Sans', sans-serif;
   font-size: 21px;
   font-weight: bold;
@@ -95,6 +97,7 @@ export const MoreDataContainer = styled.div`
 export const StaticText = styled.p`
   display: flex;
   align-items: center;
+  margin-bottom: 0;
   font-family: 'Work Sans', sans-serif;
   font-size: 15px;
   font-weight: normal;
@@ -105,6 +108,8 @@ export const StaticText = styled.p`
 
 export const DynamicText = styled.p`
   display: flex;
+  height: 40px;
+  margin-bottom: 0;
   align-items: center;
   font-family: 'Work Sans', sans-serif;
   font-size: 15px;

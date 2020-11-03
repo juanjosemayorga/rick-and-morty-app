@@ -8,7 +8,7 @@ import {
 
 import SearchLogo from '../../../assets/Search/SearchLogo'
 
-export const Search = ({ word }) => {
+export const Search = ({ word, setCurrentPage }) => {
 
   const [inputValue, setInputValue] = useState('')
 
@@ -16,6 +16,7 @@ export const Search = ({ word }) => {
     e.preventDefault()
     word(inputValue)
     setInputValue('')
+    setCurrentPage(1)
   }
 
   const handleInputChange = e => {

@@ -10,7 +10,7 @@ import {
   Hr
 } from './styles.js'
 
-export const Status = ({ statusChosen }) => {
+export const Status = ({ statusChosen, setCurrentPage }) => {
 
   const menu = (
   <Menu>
@@ -33,8 +33,10 @@ export const Status = ({ statusChosen }) => {
     setStatus(value)
     if (value === 'Status') {
       statusChosen('')
+      setCurrentPage(1)
     } else {
       statusChosen(value)
+      setCurrentPage(1)
     }
   }
 

@@ -10,7 +10,7 @@ import {
   Hr
 } from './styles.js'
 
-export const Gender = ({ genderChosen }) => {
+export const Gender = ({ genderChosen, setCurrentPage }) => {
 
   const menu = (
   <Menu>
@@ -36,8 +36,10 @@ export const Gender = ({ genderChosen }) => {
     setGender(value)
     if (value === 'Gender') {
       genderChosen('')
+      setCurrentPage(1)
     } else {
       genderChosen(value)
+      setCurrentPage(1)
     }
   }
 
