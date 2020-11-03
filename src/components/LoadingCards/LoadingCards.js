@@ -1,5 +1,4 @@
 import React from 'react'
-import PORTAL from '../../assets/Images/portal.png'
 
 import {
   Container,
