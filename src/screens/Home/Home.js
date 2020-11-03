@@ -7,11 +7,19 @@ import { ListCards } from '../../components/CardsSection/ListCards'
 export const Home = () => {
 
   const [userSearch, setUserSearch] = useState('')
+  const [genderChosen, setGenderChosen] = useState('')
+  const [statusChosen, setStatusChosen] = useState('')
 
   return (
     <Container>
-      <MainSection word={setUserSearch} />
-      <ListCards name={userSearch}/>
+      <MainSection
+        genderChosen={setGenderChosen}
+        statusChosen={setStatusChosen}
+        word={setUserSearch} />
+      <ListCards
+        gender={genderChosen}
+        status={statusChosen}
+        name={userSearch}/>
     </Container>
   )
 }

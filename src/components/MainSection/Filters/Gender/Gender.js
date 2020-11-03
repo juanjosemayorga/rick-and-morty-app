@@ -10,10 +10,13 @@ import {
   Hr
 } from './styles.js'
 
-export const Gender = () => {
+export const Gender = ({ genderChosen }) => {
 
   const menu = (
   <Menu>
+    <Menu.Item onClick={() => handleGenderSelected('Gender')}>
+      Without Filter
+    </Menu.Item>
     <Menu.Item onClick={() => handleGenderSelected('Male')}>
       Male
     </Menu.Item>
@@ -31,6 +34,11 @@ export const Gender = () => {
 
   const handleGenderSelected = value => {
     setGender(value)
+    if (value === 'Gender') {
+      genderChosen('')
+    } else {
+      genderChosen(value)
+    }
   }
 
   const [gender, setGender] = useState('Gender')

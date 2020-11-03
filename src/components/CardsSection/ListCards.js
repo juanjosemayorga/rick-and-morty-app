@@ -11,9 +11,9 @@ import { gql } from 'apollo-boost'
 import { NoData } from '../NoData/NoData'
 
 const characters = gql`
-query personajes($name: String!)
+query personajes($name: String!, $gender: String!, $status: String!)
 {
-	characters(page: 1, filter: { name: $name }) {
+	characters(page: 1, filter: { name: $name, gender: $gender, status: $status }) {
     results {
       id
       name
@@ -32,10 +32,10 @@ query personajes($name: String!)
 }
 `;
 
-export const ListCards = ({ name }) => {
+export const ListCards = ({ name, gender = '', status = '' }) => {
 
   const { loading, error, data } = useQuery(characters, {
-    variables: { name }
+    variables: { name, gender, status }
   })
 
   if (loading) return <LoadingCards />

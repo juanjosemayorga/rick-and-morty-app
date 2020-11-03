@@ -7,12 +7,14 @@ import { Filters } from './Filters/Filters'
 import Logo from './Logo/Logo'
 import { Search } from './Search/Search'
 
-export const MainSection = ({ word }) => {
+export const MainSection = ({ word, genderChosen, statusChosen }) => {
   return (
     <Container>
       <Logo />
       <Search word={word}/>
-      <Filters />
+      <Filters
+        genderChosen={genderChosen}
+        statusChosen={statusChosen} />
     </Container>
   )
 }
