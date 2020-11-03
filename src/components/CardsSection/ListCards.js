@@ -8,6 +8,7 @@ import { LoadingCards } from '../LoadingCards/LoadingCards'
 
 import { useQuery } from '@apollo/react-hooks'
 import { gql } from 'apollo-boost'
+import { NoData } from '../NoData/NoData'
 
 const characters = gql`
 query personajes($name: String!)
@@ -33,14 +34,12 @@ query personajes($name: String!)
 
 export const ListCards = ({ name }) => {
 
-  // const name = "rick"
-
   const { loading, error, data } = useQuery(characters, {
     variables: { name }
   })
 
   if (loading) return <LoadingCards />
-  if (error) return 'No hay datos'
+  if (error) return <NoData />
 
   return (
     <Container>

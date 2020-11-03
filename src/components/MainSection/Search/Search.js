@@ -15,6 +15,7 @@ export const Search = ({ word }) => {
   const handleSearch = (e) => {
     e.preventDefault()
     word(inputValue)
+    setInputValue('')
   }
 
   const handleInputChange = e => {
@@ -28,6 +29,7 @@ export const Search = ({ word }) => {
         <Input
           type="text"
           placeholder="Search character"
+          value={inputValue}
           onChange={handleInputChange} />
       </ContainerSearch>
       <Button onClick={handleSearch}>SEARCH</Button>
